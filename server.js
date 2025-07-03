@@ -8,7 +8,7 @@ app.use(cors()); // ✅ allow all origins
 
 app.get("/", (req, res) => {
   console.log("Hello Peter! 🚀");
-  res.send("Greetings from your first Node.js app on Render wow!");
+  res.send("Greetings from your first Node.js app on Render on July!");
 });
 
 app.listen(PORT, () => {
