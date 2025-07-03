@@ -1,6 +1,10 @@
 const express = require("express");
+const cors = require("cors"); // ✅ import cors
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors()); // ✅ allow all origins
 
 app.get("/", (req, res) => {
   console.log("Hello Peter! 🚀");
