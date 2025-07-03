@@ -1,14 +1,15 @@
 const express = require("express");
-const cors = require("cors"); // ✅ import cors
-
+const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
-app.use(cors()); // ✅ allow all origins
+// Enable CORS for all routes
+app.use(cors());
 
+// Root route
 app.get("/", (req, res) => {
-  console.log("Hello Peter! 🚀");
-  res.send("Greetings from your first Node.js and express.js app on Render on July!");
+  console.log("✅ GET / hit");
+  res.send("Greetings from your first Node.js app on Render july!");
 });
 
 app.listen(PORT, () => {
